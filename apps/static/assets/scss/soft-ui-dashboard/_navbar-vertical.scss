@@ -307,7 +307,13 @@
 
 @include media-breakpoint-down(xl) {
   .g-sidenav-show {
-    &{
+    &.rtl {
+      .sidenav {
+        transform: translateX($navbar-vertical-open-width + 1.5);
+      }
+    }
+
+    &:not(.rtl) {
       .sidenav {
         transform: translateX(-($navbar-vertical-open-width + 1.5));
       }
